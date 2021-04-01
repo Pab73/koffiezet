@@ -29,8 +29,8 @@ namespace WpfApp31._4
             InitializeComponent();
         }
 
+        EenKoffiezet koffiezet = new EenKoffiezet();
 
-        Koffiezet koffiezet = new Koffiezet();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             koffiezet.KoffiezetAanEvent += KoffiesetStaatAan;
@@ -38,7 +38,6 @@ namespace WpfApp31._4
             koffiezet.KoffieSchenkEvent += koffieSchenk;
             koffiezet.koffieStopSchenkEvent += koffieStopSchenk;
             koffiezet.Power = false;
-
         }
 
         private void koffieStopSchenk()
@@ -56,7 +55,7 @@ namespace WpfApp31._4
         {
             Background = Brushes.Black;
             //geen koffie meer te krijgen
-            lblBonenReservoir.Content = $"STATUS: SLEEP, BEANS HOPPER: {koffiezet.BonenReservoir}  ";
+            lblBonenReservoir.Content = $"STATUS: SLEEP, BEANS HOPPER: {EenKoffiezet.BonenReservoir}  ";
             lblSchnekStatus.Content = "";
         }
 
@@ -64,7 +63,7 @@ namespace WpfApp31._4
         {
             //mogelijkheid om koffie te zetten.
             Background = Brushes.DarkCyan;
-            lblBonenReservoir.Content = $"BEANS HOPPER: {koffiezet.BonenReservoir} ";
+            lblBonenReservoir.Content = $"BEANS HOPPER: {EenKoffiezet.BonenReservoir} ";
         }
 
         private void btnKoffiezetAan_Click(object sender, RoutedEventArgs e)
@@ -81,7 +80,7 @@ namespace WpfApp31._4
         {
             if (koffiezet.Tim.IsEnabled)
                 return;
-            if (koffiezet.BonenReservoir <= 0 && koffiezet.Power)
+            if (EenKoffiezet.BonenReservoir <= 0 && koffiezet.Power)
             {
                 BonenOpMenu();
                 return;
@@ -89,7 +88,7 @@ namespace WpfApp31._4
             koffiezet.ZetDeKoffie();
             if (koffiezet.Power)
             {
-                lblBonenReservoir.Content = $"BEANS HOPPER: {koffiezet.BonenReservoir} ";
+                lblBonenReservoir.Content = $"BEANS HOPPER: {EenKoffiezet.BonenReservoir} ";
             }
         }
 
@@ -102,8 +101,8 @@ namespace WpfApp31._4
                 {
                     mPlayer.Play();
                 }
-                koffiezet.BonenReservoir = 15;
-                lblBonenReservoir.Content = $"BEANS HOPPER: {koffiezet.BonenReservoir} ";
+                EenKoffiezet.BonenReservoir = 15;
+                lblBonenReservoir.Content = $"BEANS HOPPER: {EenKoffiezet.BonenReservoir} ";
             }
             else if (dialogbox == System.Windows.Forms.DialogResult.No)
             {
@@ -115,10 +114,10 @@ namespace WpfApp31._4
         {
             if (koffiezet.Tim.IsEnabled)
                 return;
-            if (koffiezet.Power && koffiezet.BonenReservoir < 15)
+            if (koffiezet.Power && EenKoffiezet.BonenReservoir < 15)
             {
-                koffiezet.BonenReservoir = 15;
-                lblBonenReservoir.Content = $"BEANS HOPPER: {koffiezet.BonenReservoir} ";
+                EenKoffiezet.BonenReservoir = 15;
+                lblBonenReservoir.Content = $"BEANS HOPPER: {EenKoffiezet.BonenReservoir} ";
                 using (SoundPlayer mPlayer = new SoundPlayer("C://Users/XYZ/source/repos/WpfApp31.4/WpfApp31.4/Sound/seeds-cristal-jar-4.wav"))
                 {
                     mPlayer.Play();
