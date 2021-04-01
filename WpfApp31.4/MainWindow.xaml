@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp31._4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp31._4"
+        BorderBrush="DarkCyan"
+        mc:Ignorable="d"
+        FontSize="22"
+        FontWeight="Bold"
+        Background="Black"
+        Title="MainWindow" Height="600" Width="820" Loaded="Window_Loaded" Visibility="Visible" UseLayoutRounding="False" WindowStartupLocation="CenterScreen" WindowStyle="None" IsManipulationEnabled="True">
+    
+    <StackPanel Margin="20">
+       
+        <Button Background="Black" BorderBrush="DarkCyan"  Foreground="LightCyan" Cursor="Hand" Width="150" Height="50" Margin="10 50 10 10" Name="btnKoffiezetAan" Content="WAKE UP" Click="btnKoffiezetAan_Click" BorderThickness="2,0.8,1,1">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="10" Color="#FF00F3FF" BlurRadius="10"/>
+            </Button.Effect>
+        </Button>
+        <Button Background="Black" BorderBrush="DarkCyan"  Foreground="LightCyan" Cursor="Hand" Width="150" Height="50" Margin="10" Name="btnKoffiezetUit" Content="SLEEP" Click="btnKoffiezetUit_Click">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="10" Color="#FF00F3FF" BlurRadius="10"/>
+            </Button.Effect>
+        </Button>
+        <Button Background="Black" BorderBrush="DarkCyan"  Foreground="LightCyan" Cursor="Hand"  Width="150" Height="50" Margin="10" x:Name="btnEenKoffie" Content="1 CUP COFFEE" Click="btnEenKoffie_Click">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="10" Color="#FF00F3FF" BlurRadius="10"/>
+            </Button.Effect>
+        </Button>
+        <Button Background="Black" BorderBrush="DarkCyan"  Foreground="LightCyan" Cursor="Hand" Width="250" Height="50" Margin="10" x:Name="btnVulBonen" Content="+ BEANS" Click="btnVulBonen_Click" >
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="10" Color="#FF00F3FF" BlurRadius="10"/>
+            </Button.Effect>
+        </Button>
+        <Label Height="50" Foreground="LightCyan" Margin="10" Name="lblBonenReservoir" Content="BonenReservoir Status">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="10" Color="#FF00F3FF" BlurRadius="10"/>
+            </Label.Effect>
+        </Label>
+        <StackPanel Orientation="Horizontal">
+            <Label Width="584" Height="50" Foreground="LightCyan" Margin="10" Name="lblSchnekStatus">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="10" Color="#FF00F3FF" BlurRadius="10"/>
+                </Label.Effect>
+            </Label>
+            <Button Width="100" Background="Black" BorderBrush="DarkCyan" Name="btnExit" Content="EXIT" Height="50" Foreground="LightCyan" Margin="50 10 10 10" Click="btnExit_Click">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="10" Color="#FF00F3FF" BlurRadius="10"/>
+                </Button.Effect>
+            </Button>
+
+        </StackPanel>
+        
+
+    </StackPanel>
+</Window>
