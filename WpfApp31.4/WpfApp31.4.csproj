@@ -98,8 +98,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sound\pouring-water-to-coffee-maker.wav" />
-    <Content Include="Sound\seeds-cristal-jar-4.wav" />
+    <Content Include="Resources\pouring_water_to_coffee_maker.wav" />
+    <Content Include="Resources\seeds_cristal_jar_4.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

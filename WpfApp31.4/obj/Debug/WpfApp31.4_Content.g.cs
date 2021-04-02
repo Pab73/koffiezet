@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/pouring-water-to-coffee-maker.wav")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/seeds-cristal-jar-4.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/pouring_water_to_coffee_maker.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/seeds_cristal_jar_4.wav")]
 
 

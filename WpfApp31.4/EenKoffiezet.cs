@@ -42,7 +42,7 @@ namespace WpfApp31._4
 
         void Tim_Tick(object sender, EventArgs e)
         {
-            using (SoundPlayer mPlayer = new SoundPlayer("C://Users/XYZ/source/repos/WpfApp31.4/WpfApp31.4/Sound/pouring-water-to-coffee-maker.wav"))
+            using (SoundPlayer mPlayer = new SoundPlayer(Properties.Resources.pouring_water_to_coffee_maker))
             {
                 mPlayer.PlaySync();
             }

@@ -97,7 +97,7 @@ namespace WpfApp31._4
             DialogResult dialogbox = MessageBox.Show("NO MORE BEANS, FEED THE HOPPER?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dialogbox == System.Windows.Forms.DialogResult.Yes)
             {
-                using (SoundPlayer mPlayer = new SoundPlayer(Properties.Resources.pouring_water_to_coffee_maker))
+                using (SoundPlayer mPlayer = new SoundPlayer(Properties.Resources.seeds_cristal_jar_4))
                 {
                     mPlayer.Play();
                 }
