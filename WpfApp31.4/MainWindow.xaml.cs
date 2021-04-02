@@ -97,7 +97,7 @@ namespace WpfApp31._4
             DialogResult dialogbox = MessageBox.Show("NO MORE BEANS, FEED THE HOPPER?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dialogbox == System.Windows.Forms.DialogResult.Yes)
             {
-                using (SoundPlayer mPlayer = new SoundPlayer("C://Users/XYZ/source/repos/WpfApp31.4/WpfApp31.4/Sound/seeds-cristal-jar-4.wav"))
+                using (SoundPlayer mPlayer = new SoundPlayer(Properties.Resources.pouring_water_to_coffee_maker))
                 {
                     mPlayer.Play();
                 }
@@ -118,7 +118,7 @@ namespace WpfApp31._4
             {
                 EenKoffiezet.BonenReservoir = 15;
                 lblBonenReservoir.Content = $"BEANS HOPPER: {EenKoffiezet.BonenReservoir} ";
-                using (SoundPlayer mPlayer = new SoundPlayer("C://Users/XYZ/source/repos/WpfApp31.4/WpfApp31.4/Sound/seeds-cristal-jar-4.wav"))
+                using (SoundPlayer mPlayer = new SoundPlayer(Properties.Resources.seeds_cristal_jar_4))
                 {
                     mPlayer.Play();
                 }
